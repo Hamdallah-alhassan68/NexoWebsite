@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #274001;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 4px 4px 10px gray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #274001;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #274001;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* donate button */
+.donate {
+  background: #274001;
+  color: #ffcc00;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.donate:hover {
+  background: #ccff66;
+  color: #274001;
+}
+ /* HERO SECTION */
+
+.hero{
+    width: 100%;
+    height: 50vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("img/bbgy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.overlay{
+    max-width: 850px;
+}
+
+/* TITLE */
+
+.overlay h1{
+    font-size: 68px;
+    color:#ff9900;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7);
+}
+
+/* TEXT */
+
+.overlay p{
+    font-size: 24px;
+    color: #ffcc00;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+section {
+    padding: 40px 0;
+}
+.btn{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 40px;
+    background: darkgreen;
+    color:#ff9900;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn:hover{
+    background: #ffcc00;
+    color: #274001;
+    transform: translateY(-5px);
+}
+.btn a {
+    text-decoration: none;
+    padding: 15px 5px;
+    border: none;
+    border-radius: 40px;
+    background: darkgreen;
+    color:#ff9900;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.footer{
+    width: 100%;
+    padding: 80px 8%;
+    background: #ffcc00;
+    color: #274001;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}.footer-box h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #274001;
+}
+
+.footer-box a{
+    display: block;
+    color: #274001;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box a:hover{
+    color: #ccff66;
+    padding-left: 5px;
+}
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}.social a{
+    font-size: 20px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.footer-box form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #274001;
+}
+
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background: #274001;
+    color: #aaa;
+    font-size: 14px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(218, 216, 216);
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgb(105, 104, 104);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+#ostory{
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+#ostory h2{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 3px;
+    font-weight: 700;
+    
+}
+
+/* UNDERLINE NOW BELOW */
+.overline{
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+}
+
+/* MISSION */
+.mission-text{
+    font-size: 15px;
+    line-height: 1.8;
+    color: #c2c1c1;
+    text-align: center;
+    margin-bottom:10px;
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-section{
+    width:100%;
+    padding:100px 8%;
+    background:#274001;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    margin-top:60px;
+}
+
+/* CONTACT INFO */
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.contact-box{
+    background:rgb(221, 220, 220);
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-box:hover{
+    transform:translateY(-8px);
+}
+
+.contact-box h3{
+    color:#274001;
+    margin-bottom:12px;
+    font-size:22px;
+}
+
+.contact-box p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* CONTACT FORM */
+
+.contact-form{
+    background:rgb(218, 218, 218);
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ccc;
+    border-radius:12px;
+    outline:none;
+    font-family:"Montserrat", sans-serif;
+    margin-bottom:20px;
+}
+
+.contact-form textarea{
+    height:180px;
+    resize:none;
+}
+
+.contact-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:40px;
+    background:#274001;
+    color:#ffcc00;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.contact-btn:hover{
+    background:#ffcc00;
+    color:#274001;
+    transform:translateY(-5px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contact-form{
+        padding:30px 20px;
+    }
+
+}
+      
+/* RESPONSIVE */
+@media(max-width: 900px){
+    .text{
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-box form {
+        width: 270px;
+        
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+</style>
+    
+ </header>   
+ <body>
+     <header>
+  <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height="UTF-8"></a>
+
+ <nav>
+            
+            <ul class="navbar"  id="navLinks">
+                <li class="logo"></li>
+                <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                 <li><a href="home.html">Home</a></li>
+                 <li><a href="about.html">About us</a></li>
+                 <li><a href="Program.html">Program</a></li>
+                 <li><a href="getinvolve.html">Get Invovled</a></li>
+                 <li><a href="contact.html">Contact us</a></li>
+                 <li> <a class="donate" href="#">Donate to us</a></li>
+                
+                 </ul>
+               <div class="hideOnMobile">
+                 <ul>
+                  <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                 <li class="hideOnMobile"><a href="about.html">About us</a></li>
+                 <li class="hideOnMobile"><a href="Program.html">Program</a></li>
+                 <li class="hideOnMobile"><a href="getinvolve.html">Get Invovled</a></li>
+                 <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
+                 <li class="hideOnMobile"> <a class="donate" href="#">Donate to us</a></li>
+                 </div>
+                <li class="menubutton" onclick="shownavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+           </ul>
+        </nav>
+</header>
+<div class="hero">
+
+    <div class="overlay">
+        <h1>Nexo Girls</h1>
+
+        <p>
+           Contact Us
+        </p>
+        <button class="btn"><a href="getinvolve.html">Get Invovled</a></button>
+    </div>
+    
+        </p>
+    </div>
+    
+</div>
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact-section">
+
+    <div id="ostory">
+        <h2>Contact Us</h2>
+        <span class="overline"></span>
+
+        <p class="mission-text">
+            We'd love to hear from you. Reach out to us for
+            partnerships, mentorship, volunteering, or general inquiries.
+        </p>
+    </div>
+
+    <div class="contact-container">
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+            <div class="contact-box">
+                <h3>Email</h3>
+                <p>info@nexogirls.org</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Phone</h3>
+                <p>+234 000 000 000</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Location</h3>
+                <p>Nigeria, Pwanda, Kenya</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Working Hours</h3>
+                <p>Monday - Friday | 8:00 AM - 5:00 PM</p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Follow us</h3>
+                <div class="social">
+                <a href="https://www.facebook.com/nexogirlss/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/p/C9meDnpoBC8/?img_index=1"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+
+        <form class="contact-form">
+
+            <div class="contact-grid">
+
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number">
+
+                <input type="text" placeholder="Subject">
+
+            </div>
+
+            <textarea 
+            placeholder="Write your message here..."
+            required></textarea>
+
+            <button type="submit" class="contact-btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<footer>
+              
+       <section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
+            <h2>Contact & Location</h2>
+            <p>Tamle- Ghana.<br> Nyani near the Tamle sport stadium<br>
+            <strong>Call us</strong>+233245210865</p>
+
+            <div class="social">
+                <a href="https://www.facebook.com/nexogirlss/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/p/C9meDnpoBC8/?img_index=1"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+    
+        </div>
+        <div class="footer-box">
+            <h2>Our Team</h2>
+            <a href="#">The Founder</a>
+            <a href="#">Our Partners& Staff</a>
+            <a href="#">The Volunteers & Donors</a>
+            <a href="#">The Trustees& Sponsors</a>
+ 
+        </div>
+        <div class="footer-box">
+            <h2>Useful Links</h2>
+            <a href="#">Donating To us</a>
+            <a href="#">Applying to Volunteer</a>
+            <a href="#">Our Location</a>
+            <a href="#">Applying for funds</a>
+
+            
+        </div>
+        <div class="footer-box">
+            <h2>Make Suggestion</h2>
+            <p>You can make a suggestion or ask question<br>By sending us an email</p>
+            <form action="">
+                <i class="bx bxs-envelope"></i>
+                <input type="email" name="" id="" placeholder="Enter Your Email">
+                <i class="bx bx-arrow-back-rotate-180"><i class="fa-solid fa-envelope"></i></i>
+
+            </form>
+            <img src="img/climi1.png" alt="" height="150px" width="150px">
+        </div>
+         
+    </section>
+    <div class="copyright">
+        <p>Al-Ayan copyright@</p>
+    </div>
+    </footer>
+    
+
+</body>
+</html>
